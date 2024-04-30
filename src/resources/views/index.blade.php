@@ -3,6 +3,8 @@
 @section('content')
 
 @include('inc.index.main.section')
+@include('inc.index.about-us.section')
+<!-- most popular -->
 <section class="probootstrap-section">
 	<div class="container">
 		<div class="row">
@@ -91,7 +93,7 @@
 	</div>
 </section>
 
-
+<!-- latest donations -->
 <section class="probootstrap-section probootstrap-bg probootstrap-section-dark" style="background-image: url(img/hero_bg_bw_1.jpg)" data-stellar-background-ratio="0.5">
 	<div class="container">
 		<div class="row">
