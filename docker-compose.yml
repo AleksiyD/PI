@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  web:
+    container_name: pi-web
+    build: ./docker/web
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/var/www/html
+
+  db: 
+    container_name: pi-db
+    image: postgres
+    environment:
+      POSTGRES_USER: pi
+      POSTGRES_DB: pi
+      POSTGRES_PASSWORD: pi
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db:/var/lib/postgresql/data
+
+  adminer:
+    container_name: pi-adminer
+    image: adminer
+    ports:
+      - 8080:8080
