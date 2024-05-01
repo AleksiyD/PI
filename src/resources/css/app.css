@@ -111,3 +111,11 @@
 .btn-card {
 	align-self: flex-end;
 }
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: #FDBE34;
+}
