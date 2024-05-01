@@ -1305,7 +1305,7 @@ only screen and (min-resolution:2dppx) {
 
 .probootstrap-donors .media img {
 	border-radius: 50%;
-	width: 90px;
+	width: 200px;
 	margin: 0 auto
 }
 

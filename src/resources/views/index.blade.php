@@ -11,4 +11,5 @@
 @include('inc.index.development.section')
 @include('inc.index.research.section')
 @include('inc.index.mass-media-about-us.section')
+@include('inc.index.support.section')
 @endsection

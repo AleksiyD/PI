@@ -161,3 +161,22 @@ a:hover {
 .probootstrap-footer .probootstrap-back-to-top {
 	text-align: left;
 }
+
+.card-support {
+	min-height: 340px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-support .text {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+}
+
+
