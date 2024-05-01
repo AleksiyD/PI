@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreFeedbackFormRequest;
 
 class IndexController extends Controller {
     
@@ -11,7 +11,7 @@ class IndexController extends Controller {
     }
 
     // make client object and redirect to info_verification_page
-    public function send_feedback_form(Request $request) {
+    public function send_feedback_form(StoreFeedbackFormRequest $request) {
         dd($request->all());
     }
 

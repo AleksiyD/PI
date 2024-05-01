@@ -16,3 +16,10 @@
     </div>
   </div>
 </div>
+@if($errors->isNotEmpty())
+  @push('script')
+    <script>
+      $('#modal-{{ $id }}').modal('show');
+    </script>
+  @endpush
+@endif
