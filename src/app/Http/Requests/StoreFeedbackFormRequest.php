@@ -23,8 +23,8 @@ class StoreFeedbackFormRequest extends FormRequest {
         return [
             'full_name' => 'required|string|min:6|max:70',
             'email' => 'required|email|string|max:70',
-            'address' => 'required|string|max:70',
-            'phone' => 'nullable|string|regex:/^([0-9\s\-\+\(\)]*)$/',
+            'address' => 'required|string|max:255',
+            'phone' => 'nullable|string|regex:/^([0-9\s\-\+\(\)]*)$/|max:20',
             'request' => 'required|string|min:10|max:2500',
             'comment' => 'nullable|string|max:2500',
             'wish' => 'nullable|string|max:1000'

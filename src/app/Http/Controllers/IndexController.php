@@ -12,6 +12,7 @@ class IndexController extends Controller {
 
     // make client object and redirect to info_verification_page
     public function send_feedback_form(StoreFeedbackFormRequest $request) {
+        
         dd($request->all());
     }
 
