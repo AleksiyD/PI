@@ -1,4 +1,4 @@
-<section class="mass-media-about-us probootstrap-section">
+<section id="mass-media-about-us" class="mass-media-about-us probootstrap-section">
     <div class="container">
         <div class="probootstrap-animate">
 					<div class="col-md-12 text-center section-heading probootstrap-animate fadeIn probootstrap-animated" data-animate-effect="fadeIn">

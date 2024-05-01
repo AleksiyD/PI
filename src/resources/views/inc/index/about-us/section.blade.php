@@ -1,4 +1,4 @@
-<section class="probootstrap-section  probootstrap-section-colored">
+<section id="about-us" class="probootstrap-section  probootstrap-section-colored">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center section-heading probootstrap-animate">

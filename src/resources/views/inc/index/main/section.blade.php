@@ -8,7 +8,7 @@
                     </h1>
                     <div class="row">
                         <a href="#" class="btn btn-primary btn-lg">Обратная связь</a>
-                        <a href="#" class="btn btn-primary btn-lg">Контакты</a>
+                        <a href="#contacts" class="btn btn-primary btn-lg">Контакты</a>
                     </div>
                 </div>
             </div>

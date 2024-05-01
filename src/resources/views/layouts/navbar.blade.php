@@ -15,8 +15,10 @@
         <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="/">Главная</a></li>
-                <li><a href="#footer">О нас</a></li>
-                <li><a href="news.html">Контакты</a></li>
+                <li><a href="#about-us">О нас</a></li>
+                <li><a href="#mass-media-about-us">СМИ о нас</a></li>
+                <li><a href="#project">Уникальность проекта</a></li>
+                <li><a href="#contacts">Контакты</a></li>
                 <li class="probootstra-cta-button last"><a href="/" class="btn btn-primary">Обратная связь</a></li>
             </ul>
         </div>

@@ -1,4 +1,4 @@
-<footer id="footer" class="probootstrap-footer probootstrap-bg">
+<footer id="contacts" class="probootstrap-footer probootstrap-bg">
     <div class="container">
         <div class="row">
             <div class="col-md-12 probootstrap-animate">

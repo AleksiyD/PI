@@ -1,4 +1,4 @@
-<section class="probootstrap-section">
+<section id="project" class="probootstrap-section">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center section-heading probootstrap-animate" data-animate-effect="fadeIn">
