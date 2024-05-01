@@ -83,5 +83,31 @@
 .project-image .image {
 	display: flex;
 	justify-content: center;
-	height: 100%;
+	height: 390px;
+}
+
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: white;
+	min-height: 800px;
+}
+
+.card > figure {
+	display: flex;
+	justify-content: center;
+}
+
+.card > figure > img {
+	width: 100%;
+}
+
+.probootstrap-image-text-block .probootstrap-cause-inner {
+	border: none;
+}
+
+.btn-card {
+	align-self: flex-end;
 }
