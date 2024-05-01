@@ -2,3 +2,86 @@
 	display: inline-block;
 	margin-top: 30px;
 }
+
+.project-image {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	/* height: 500px; */
+}
+
+.project-image .header {
+	text-align: center;
+	font-weight: bold;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.project-image .image-block {
+	/* order: 1; */
+	/* background-color: red; */
+}
+
+.image-block ol {
+	list-style-type: none; 
+	counter-reset: num;
+	position: relative;	    
+	margin: 0 0 0 60px;
+	padding: 15px 0 5px 0;
+	font-size: 16px;
+}
+
+.image-block ol li {
+	position: relative;	
+	margin: 0 0 0 0;
+	padding: 0 0 10px 0;
+	line-height: 1.4;
+}
+
+.image-block ol li:after {
+	content: counter(num); 
+	counter-increment: num;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: -45px;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	background: #6c9bc3;
+	background: linear-gradient(white, #6c9bc3);;
+	color: #000;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 50%;
+	border: 1px solid #6c9bc3;
+}
+ 
+/* Вертикальная линия */
+.image-block ol:before {
+	content: ''; 
+	position: absolute;
+	top: 15px;
+	bottom: 15px;
+	left: -30px;    
+	width: 1px;
+	border-left: 1px solid #6c9bc3;
+}
+
+/* Скрытие линии у последнего li */
+.image-block ol li:last-child:before {
+	content: ''; 
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -38px;
+	width: 28px;
+	background: #fff;
+}
+
+.project-image .image {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}

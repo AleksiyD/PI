@@ -1,10 +1,13 @@
-@extends('layouts.layout', ['title' => 'Главная'])
+@extends('layouts.layout')
+
+@section('title', 'Главная')
 
 @section('content')
 
 @include('inc.index.main.section')
 @include('inc.index.about-us.section')
 @include('inc.index.general-info.section')
+@include('inc.index.project.section')
 <!-- most popular -->
 <section class="probootstrap-section">
 	<div class="container">
