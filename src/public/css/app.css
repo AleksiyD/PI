@@ -188,4 +188,11 @@ a:hover {
 	margin-bottom: 10px;
 }
 
+.modal-header  p {
+	margin-bottom: 0;
+}
 
+.modal-body {
+	max-height: calc(100vh - 212px);
+	overflow-y: auto;
+}

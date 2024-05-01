@@ -7,7 +7,9 @@
 											<span>Компания, реализующая рецептуры пищевых продуктов в области здорового питания</span>
                     </h1>
                     <div class="row btns">
-                        <a href="#" class="btn btn-primary btn-lg">Обратная связь</a>
+                        @component('layouts.utils.modal.btn', ['id' => 'modal-feedback-form'])
+                            Обратная связь
+                        @endcomponent
                         <a href="#contacts" class="btn btn-primary btn-lg">Контакты</a>
                     </div>
                 </div>

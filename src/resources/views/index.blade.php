@@ -12,4 +12,12 @@
 @include('inc.index.research.section')
 @include('inc.index.mass-media-about-us.section')
 @include('inc.index.support.section')
+
+@component('layouts.utils.modal.window', [
+	'id' => 'feedback-form', 
+	'title' => 'Форма обратной связи',
+	'desc' => 'Оставьте свои контакты, и мы свяжемся с Вами в удобное для Вас время'
+])
+	@include('inc.index.feedback.form')
+@endcomponent
 @endsection

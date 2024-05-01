@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\IndexController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-Route::get('/', function() {
-    return view('index');
+Route::controller(IndexController::class)->group(function() {
+    Route::get('/', 'index')->name('index');
+    Route::post('/send-feedback-form', 'send_feedback_form')->name('send-feedback-form');
 });
