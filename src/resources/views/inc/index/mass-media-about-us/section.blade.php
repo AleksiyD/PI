@@ -7,7 +7,7 @@
 					<div class="post-wrapper">
 						<div class="post">
 							<p>
-								<iframe src="https://vk.com/video_ext.php?oid=-41441187&id=456239800&hd=3" height="720" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen></iframe>
+								<iframe src="https://vk.com/video_ext.php?oid=-41441187&id=456239800&hd=3" height="360" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen></iframe>
 							</p>
 							<h3>Студенческий стартап, как начало нового проекта</h3>
 							<p>Создание инжиниринговой компании, с целью разработки и внедрения новых идей, продуктов и услуг на рынке</p>
@@ -45,7 +45,7 @@
 							])
 							<div class="post">
 								<p>
-									<iframe height="720" src="//www.ntv.ru/embed/2293182?utm_content=video" frameborder="0" loading="lazy" allow="autoplay; fullscreen"></iframe>
+									<iframe height="360" src="//www.ntv.ru/embed/2293182?utm_content=video" frameborder="0" loading="lazy" allow="autoplay; fullscreen"></iframe>
 								</p>
 								<h3>Выпуск программы «Живая Еда» с Сергеем Малозёмовым на НТВ от 23.12.2023</h3>
 								<p>Обогащённые продукты — еда будущего.</p>
