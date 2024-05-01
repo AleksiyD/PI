@@ -6,7 +6,7 @@
                     <h1 class="probootstrap-heading probootstrap-animate">ООО Пищевой инжиниринг
 											<span>Компания, реализующая рецептуры пищевых продуктов в области здорового питания</span>
                     </h1>
-                    <div class="row">
+                    <div class="row btns">
                         <a href="#" class="btn btn-primary btn-lg">Обратная связь</a>
                         <a href="#contacts" class="btn btn-primary btn-lg">Контакты</a>
                     </div>
