@@ -119,3 +119,33 @@ a {
 a:hover {
 	color: #FDBE34;
 }
+
+.post-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.post {
+	width: 80%;
+	margin-bottom: 30px;
+	box-shadow: 10px 5px 5px gray;
+}
+
+.post p {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 0;
+}
+
+.post h3 {
+	margin: 5px 0;
+}
+
+.post > p {
+	display: flex;
+	justify-content: center;
+}
