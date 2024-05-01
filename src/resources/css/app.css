@@ -157,3 +157,7 @@ a:hover {
 	display: flex;
 	justify-content: center;
 }
+
+.probootstrap-footer .probootstrap-back-to-top {
+	text-align: left;
+}

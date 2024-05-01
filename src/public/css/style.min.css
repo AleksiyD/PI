@@ -1087,9 +1087,15 @@ only screen and (min-resolution:2dppx) {
 	color: rgba(255, 255, 255, .3)
 }
 
-.probootstrap-footer .probootstrap-footer-widget .probootstrap-contact-info li span {
+.probootstrap-footer .probootstrap-footer-widget .probootstrap-contact-info li span,
+.probootstrap-footer .probootstrap-footer-widget .probootstrap-contact-info li a {
 	vertical-align: top;
-	display: table-cell
+	display: table-cell;
+	color: white;
+}
+
+.probootstrap-footer .probootstrap-footer-widget .probootstrap-contact-info li a:hover {
+	color: #FDBE34;
 }
 
 .probootstrap-footer .probootstrap-back-to-top {
@@ -1121,7 +1127,7 @@ only screen and (min-resolution:2dppx) {
 }
 
 .probootstrap-news li h3 a:hover {
-	color: #000
+	color: white;
 }
 
 .probootstrap-news li p {
