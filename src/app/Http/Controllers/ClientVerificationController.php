@@ -12,7 +12,7 @@ class ClientVerificationController extends Controller {
     
     public function initial(Client $client) {
         if($client->isVerified()) {
-            return redirect()->route('index'); // with notification
+            return redirect()->route('index')->with('success', "{$client->full_name}, Ваш запрос успешно создан! Мы с Вами свяжемся в скором времени!");
         }
         do {
             $token = Str::random(20);
@@ -32,8 +32,9 @@ class ClientVerificationController extends Controller {
 
     public function check(VerifyEmailClient $token) {
         $token->client()->update(['email_verified' => true]);
+        $msg = "Почта {$token->client->email} подтверждена! {$token->client->full_name}, Ваш запрос успешно создан! Мы с Вами свяжемся в скором времени!";
         $token->delete();
-        return redirect()->route('index'); // with notification
+        return redirect()->route('index')->with('success', $msg);
     }
 
 }

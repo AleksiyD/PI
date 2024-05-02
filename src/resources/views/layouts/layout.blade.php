@@ -23,6 +23,9 @@
 </head>
 
 <body>
+    @include('layouts.utils.notifications.notification', ['key' => 'success'])
+    @include('layouts.utils.notifications.notification', ['key' => 'warning'])
+    @include('layouts.utils.notifications.notification', ['key' => 'danger'])
     @include('layouts.navbar')
     @yield('content')
     @include('layouts.footer')

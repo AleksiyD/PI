@@ -205,3 +205,11 @@ a:hover {
 .verify-notice p {
 	font-size: xx-large;
 }
+
+.notification-wrapper {
+	position: fixed; 
+	z-index: 999;
+	bottom: 0;
+	min-width: 100%;
+	padding: 30px;
+}
