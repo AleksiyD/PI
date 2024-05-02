@@ -196,3 +196,8 @@ a:hover {
 	max-height: calc(100vh - 212px);
 	overflow-y: auto;
 }
+
+.with-errors {
+	margin: 0;
+	font-size: small;
+}
