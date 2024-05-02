@@ -1,4 +1,4 @@
-<form id="feedback-form" action="{{ route('send-feedback-form') }}" method="POST" class="probootstrap-form">
+<form id="feedback-form" action="{{ route('feedback') }}" method="POST" class="probootstrap-form">
 	@csrf
 	@component('layouts.utils.inputs.input', [
 		'name' => 'full_name',

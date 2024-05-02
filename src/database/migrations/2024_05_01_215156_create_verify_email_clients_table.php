@@ -4,20 +4,17 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClientsTable extends Migration {
+class CreateVerifyEmailClientsTable extends Migration {
     /**
      * Run the migrations.
      *
      * @return void
      */
     public function up() {
-        Schema::create('clients', function (Blueprint $table) {
+        Schema::create('verify_email_clients', function (Blueprint $table) {
             $table->id();
-            $table->string('full_name', 70);
-            $table->string('email', 70)->unique();
-            $table->boolean('email_verified')->default(false);
-            $table->string('address', 255);
-            $table->string('phone', 20)->nullable();
+            $table->foreignId('client_id')->constrained();
+            $table->string('verify_token', 20)->unique();
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ class CreateClientsTable extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('clients');
+        Schema::dropIfExists('verify_email_clients');
     }
 }

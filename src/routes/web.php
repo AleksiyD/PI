@@ -1,9 +1,8 @@
 <?php
 
+use App\Http\Controllers\ClientVerificationController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\IndexController;
-use Illuminate\Foundation\Auth\EmailVerificationRequest;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(IndexController::class)->group(function() {
-    Route::get('/', 'index')->name('index');
-    Route::post('/send-feedback-form', 'send_feedback_form')->name('send-feedback-form');
+Route::get('/', IndexController::class)->name('index');
+Route::post('/send-feedback', FeedbackController::class)->name('feedback');
+Route::name('client.')->prefix('client')->group(function() {
+    Route::controller(ClientVerificationController::class)->name('verify.')->prefix('verify')->group(function() {
+        Route::get('/initial/{client}', 'initial')->name('initial');
+        Route::get('/notice/{client}', 'notice')->name('notice');
+        Route::get('/check/{token}', 'check')->name('check');
+    });
 });
 
 // Route::get('/email/verify', function () {
