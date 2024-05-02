@@ -7,6 +7,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+	nodejs \
+	npm \
 	locales \
 	git \
 	unzip \
@@ -19,9 +21,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	libfreetype6-dev \
 	libjpeg62-turbo-dev \
 	libpng-dev \
-	libpq-dev \
-	nodejs \
-	npm
+	libpq-dev 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 	&& docker-php-ext-install -j$(nproc) gd intl pdo pdo_pgsql pgsql zip bcmath \

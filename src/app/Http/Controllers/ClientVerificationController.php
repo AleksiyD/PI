@@ -18,6 +18,7 @@ class ClientVerificationController extends Controller {
             $token = Str::random(20);
         } while(VerifyEmailClient::tokenExists($token));
         
+        $client->verifyTokens()->delete();
         $client->verifyTokens()->create(['verify_token' => $token]);
 
         Mail::to($client)->send(new VerifyMailClient($client, route('client.verify.check', $token)));
@@ -26,12 +27,13 @@ class ClientVerificationController extends Controller {
     }
 
     public function notice(Client $client) {
-        dd($client);
+        return view('client.verify.notice', ['client' => $client]);
     }
 
     public function check(VerifyEmailClient $token) {
-        dd($token);
-        return redirect('/');
+        $token->client()->update(['email_verified' => true]);
+        $token->delete();
+        return redirect()->route('index'); // with notification
     }
 
 }

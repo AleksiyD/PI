@@ -7,9 +7,6 @@
 					Методология включает в себя несколько уровней и основные этапы.</p>
 			</div>
 		</div>
-		{{-- <div class="project-image">
-			<img src="../img/project.png" alt="" height="500px">
-		</div> --}}
 		<div class="project-image probootstrap-animate" data-animate-effect="fadeIn">
 			<div class="header">
 				<h3>Методология цифрового моделирования<br>(основные этапы)</h3>

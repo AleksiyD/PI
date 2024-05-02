@@ -19,7 +19,11 @@
                 <li><a href="#mass-media-about-us">СМИ о нас</a></li>
                 <li><a href="#project">Уникальность проекта</a></li>
                 <li><a href="#contacts">Контакты</a></li>
-                <li class="probootstra-cta-button last"><a href="/" class="btn btn-primary">Обратная связь</a></li>
+                <li class="probootstra-cta-button last" style="padding-top: 20px;">
+                    @component('layouts.utils.modal.btn', ['id' => 'modal-feedback-form'])
+                        Обратная связь
+                    @endcomponent
+                </li>
             </ul>
         </div>
     </div>

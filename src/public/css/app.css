@@ -201,3 +201,7 @@ a:hover {
 	margin: 0;
 	font-size: small;
 }
+
+.verify-notice p {
+	font-size: xx-large;
+}
