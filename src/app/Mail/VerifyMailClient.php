@@ -31,6 +31,8 @@ class VerifyMailClient extends Mailable {
      * @return $this
      */
     public function build() {
-        return $this->view('emails.verify-email-client');
+        return $this->subject(env('APP_URL'))
+        ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'))
+        ->view('emails.verify-email-client');
     }
 }

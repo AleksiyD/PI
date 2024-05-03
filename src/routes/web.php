@@ -3,6 +3,8 @@
 use App\Http\Controllers\ClientVerificationController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\Manage\ManageController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,22 +28,15 @@ Route::name('client.')->prefix('client')->group(function() {
     });
 });
 
-// Route::get('/email/verify', function () {
-//     return view('auth.verify-email');
-// })->middleware('auth')->name('verification.notice');
-
-// Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-//     $request->fulfill();
-
-//     return redirect('/home');
-// })->middleware(['auth', 'signed'])->name('verification.verify');
-
-// Route::post('/email/verification-notification', function (Request $request) {
-//     $request->user()->sendEmailVerificationNotification();
-
-//     return back()->with('message', 'Verification link sent!');
-// })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
-
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::prefix('manage')->group(function() {
+    Auth::routes([
+        'register' => false,
+        'reset' => false,
+        'verify' => false
+    ]);
+    Route::middleware('auth')->name('manage.')->group(function() {
+        Route::get('/', ManageController::class)->name('index');
+        // Route::get('clients')
+        // Route::get('requests')
+    });
+});
