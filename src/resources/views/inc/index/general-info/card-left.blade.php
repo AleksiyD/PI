@@ -8,7 +8,7 @@
 		Вы можете оставить свою заявку или связаться с нами по телефону.'
 	])
 	@include('inc.index.general-info.image', [
-		'img' => 'img/img_sq_5_big.jpg',
+		'img' => 'img/quality.jpg',
 		'alt' => 'img'
 	])
 </section>

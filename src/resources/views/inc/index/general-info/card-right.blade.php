@@ -1,6 +1,6 @@
 <section class="probootstrap-half">
 	@include('inc.index.general-info.image', [
-		'img' => 'img/img_sq_5_big.jpg',
+		'img' => 'img/services.jpg',
 		'alt' => 'img'
 	])
 	@include('inc.index.general-info.text', [

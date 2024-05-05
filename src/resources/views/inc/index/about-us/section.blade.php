@@ -13,7 +13,7 @@
             <div class="col-md-12 probootstrap-animate">
                 @component('inc.index.about-us.carousel')
                     @include('inc.index.about-us.carousel-item', [
-                        'img' => 'img/person_1.jpg',
+                        'img' => 'img/ekaterina_1x1.jpg',
                         'alt' => 'img',
                         'post' => 'Генеральный директор',
                         'text' => 'Финалист проектно-образовательного интенсива АНО «Университет 20.35» по направлению FoodNet (Москва, 2020)
@@ -23,7 +23,7 @@
                         'name' => 'Гресева Екатерина Геннадьевна',
                     ])
                     @include('inc.index.about-us.carousel-item', [
-                        'img' => 'img/person_1.jpg',
+                        'img' => 'img/tovarish_1x1.jpg',
                         'alt' => 'img',
                         'post' => 'Главный технолог',
                         'text' => 'Доктор технических наук, профессор кафедры пищевых технологий и инжиниринга Северо-Кавказского Федерального университета',
