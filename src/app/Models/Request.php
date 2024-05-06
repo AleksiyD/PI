@@ -28,7 +28,7 @@ class Request extends Model {
 
     protected $fillable = ['request', 'comment', 'wish', 'created_at'];
 
-    public $filterable = ['client_id'];
+    public $filterable = ['client_id', 'email_verified'];
 
     public $searchable = ['client_id'];
 

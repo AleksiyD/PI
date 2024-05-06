@@ -12,8 +12,10 @@ use App\Http\Livewire\Traits\{
     Searchable,
     Filterable
 };
-use App\Models\Client;
-use App\Models\Request;
+use App\Models\{
+    Client,
+    Request
+};
 
 class ShowRequests extends Component {
 
@@ -28,8 +30,9 @@ class ShowRequests extends Component {
         'email_verified' => 't'
     ];
 
-    public function mount() {
+    public function mount(Client $client) {
         $this->parent_mount();
+        if(!is_null($client->id)) $this->fields['client_id'] = $client->id;
     }
 
     public function render() {
@@ -51,5 +54,5 @@ class ShowRequests extends Component {
             'requests' => $requests
         ]);
     }
-    
+
 }

@@ -22,10 +22,10 @@
     @livewireStyles
 </head>
 <body>
-    <div id="app">
+    <div id="app" style="overflow-x: auto;">
         @include('layouts.manage-navbar')
 
-        <main class="py-4">
+        <main class="container py-4">
             {{ $slot }}
         </main>
     </div>

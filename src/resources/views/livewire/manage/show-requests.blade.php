@@ -5,7 +5,18 @@
 
     @component('layouts.utils.card')
     @include('layouts.utils.paginate')
-    @include('layouts.utils.rel-filter', ['head' => 'Все', 'field' => 'client_id', 'column' => 'full_name', 'relation' => 'client', 'data' => $requests])
+    
+    @include('layouts.utils.filters', ['head' => 'Все клиенты', 'field' => 'client_id', 'column' => 'full_name', 'data' => $clients])
+    @include('layouts.utils.other-filter', ['head' => 'Верификация', 'field' => 'email_verified', 'data' => [
+        [
+            'option' => 'Верифицирован',
+            'value' => 't'
+        ],
+        [
+            'option' => ' Не верифицирован',
+            'value' => 'f'
+        ]
+    ]])
 
     <div class="col-md-2">
         <button wire:click="clear" class="btn btn-primary py-0 mt-1">Очистить</button>

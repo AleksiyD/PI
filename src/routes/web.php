@@ -41,5 +41,6 @@ Route::prefix('manage')->group(function() {
         Route::get('/', ShowMainPage::class)->name('show-main-page');
         Route::get('/clients', ShowClients::class)->name('show-clients');
         Route::get('/requests', ShowRequests::class)->name('show-requests');
+        Route::get('/requests/{client}', ShowRequests::class)->name('show-requests-client');
     });
 });

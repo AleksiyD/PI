@@ -5,7 +5,7 @@
 
     @component('layouts.utils.card')
     @include('layouts.utils.paginate')
-    @include('layouts.utils.other-filter', ['head' => 'Все', 'field' => 'email_verified', 'data' => [
+    @include('layouts.utils.other-filter', ['head' => 'Верификация', 'field' => 'email_verified', 'data' => [
         [
             'option' => 'Верифицирован',
             'value' => 't'
@@ -51,6 +51,12 @@
                 <td scope="col">{{ $client->address }}</td>
                 <td scope="col">{{ $client->phone }}</td>
                 <td scope="col">{{ $client->created_at }}</td>
+                <td scope="col">
+                    <a href="{{ route('manage.show-requests-client', ['client' => $client]) }}">
+                        <i class="fa fa-eye"></i>
+                        Запросы
+                    </a>
+                </td>
             </tr>
             @endforeach
         </tbody>
