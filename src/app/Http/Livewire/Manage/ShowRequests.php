@@ -51,8 +51,5 @@ class ShowRequests extends Component {
             'requests' => $requests
         ]);
     }
-
-    public function getMoreData(Request $request) {
-        dd($request);
-    }
+    
 }

@@ -9,7 +9,7 @@ trait RequestFilter {
 
   use Filter;
 
-    public function f_email_client_id(Builder $query, $field, $id) {
+    public function f_client_id(Builder $query, $field, $id) {
         return $this->defaultQuery($query, $field, $id);
     }
 

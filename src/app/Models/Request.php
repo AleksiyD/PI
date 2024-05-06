@@ -22,6 +22,9 @@ class Request extends Model {
     use RequestFilter;
     use Searchable;
 
+    protected $casts = [
+        'created_at' => 'datetime:d-m-Y H:m'
+    ];
 
     protected $fillable = ['request', 'comment', 'wish', 'created_at'];
 

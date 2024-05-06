@@ -24,6 +24,7 @@ class ShowRequestsMore extends Component {
     public function getData(Request $request) {
         if(!array_key_exists($request->id, $this->requests)) {
             $this->requests[$request->id] = $request->toArray();
+            $this->requests[$request->id]['client'] = $request->client->toArray();
         }
         $this->request = $this->requests[$request->id];
         $this->dispatchBrowserEvent('show-request-modal');

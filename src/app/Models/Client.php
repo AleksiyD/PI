@@ -21,6 +21,10 @@ class Client extends Model {
     use ClientFilter;
     use Searchable;
 
+    protected $casts = [
+        'created_at' => 'datetime:d-m-Y H:m'
+    ];
+
     protected $fillable = ['full_name', 'email', 'address', 'phone'];
 
     public $filterable = ['email_verified'];
