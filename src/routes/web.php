@@ -6,6 +6,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Manage\ManageController;
 use App\Http\Livewire\Manage\ShowClients;
 use App\Http\Livewire\Manage\ShowMainPage;
+use App\Http\Livewire\Manage\ShowRequests;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -39,7 +40,6 @@ Route::prefix('manage')->group(function() {
     Route::middleware('auth')->name('manage.')->group(function() {
         Route::get('/', ShowMainPage::class)->name('show-main-page');
         Route::get('/clients', ShowClients::class)->name('show-clients');
-        // Route::get('clients')
-        // Route::get('requests')
+        Route::get('/requests', ShowRequests::class)->name('show-requests');
     });
 });

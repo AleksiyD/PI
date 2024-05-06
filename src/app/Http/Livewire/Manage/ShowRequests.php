@@ -13,8 +13,9 @@ use App\Http\Livewire\Traits\{
     Filterable
 };
 use App\Models\Client;
+use App\Models\Request;
 
-class ShowClients extends Component {
+class ShowRequests extends Component {
 
     use WithPagination, Sortable, Filterable, Searchable {
         mount as private parent_mount;
@@ -33,8 +34,11 @@ class ShowClients extends Component {
 
     public function render() {
         $this->search = (string) $this->search;
+        
+        $clients = Client::all();
 
-        $clients = Client::select('id', 'full_name', 'email', 'email_verified', 'address', 'phone', 'created_at')
+        $requests = Request::with(['client:id,full_name,email,address,phone'])
+        ->select('id', 'client_id', 'created_at')
         ->filterable($this->fields)
         ->sortable($this->sortable)
         ->searchable($this->search)
@@ -42,9 +46,13 @@ class ShowClients extends Component {
 
         $this->emit('render');
 
-        return view('livewire.manage.show-clients', [
-            'clients' => $clients
+        return view('livewire.manage.show-requests', [
+            'clients' => $clients,
+            'requests' => $requests
         ]);
     }
 
+    public function getMoreData(Request $request) {
+        dd($request);
+    }
 }

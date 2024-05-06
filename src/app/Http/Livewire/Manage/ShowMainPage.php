@@ -8,7 +8,6 @@ class ShowMainPage extends Component
 {
     public function render()
     {
-        return view('livewire.manage.show-main-page')
-        ->layout('layouts.manage-layout');
+        return view('livewire.manage.show-main-page');
     }
 }
