@@ -11,9 +11,5 @@ trait Filterable {
   public function dropFilterFields($field) {
     unset($this->fields[$field]);
   }
-
-  public function tree() {
-    $this->fields['tree'] = !$this->fields['tree'];
-  }
   
 }

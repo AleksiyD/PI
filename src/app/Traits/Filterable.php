@@ -12,8 +12,7 @@ trait Filterable {
       return $query->when($fields, function($query, $fields) {
         foreach($fields as $field => $id) {
           if($id != '' && in_array($field, $this->filterable)) {
-            $tree = $fields['tree'] ?? false;
-            call_user_func_array([$this, "f_{$field}"], [$query, $field, $id, $tree]);
+            call_user_func_array([$this, "f_{$field}"], [$query, $field, $id]);
           }
         }
       });

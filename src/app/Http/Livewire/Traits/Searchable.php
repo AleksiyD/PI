@@ -34,8 +34,6 @@ trait Searchable {
 
     unset($this->search);
     $this->search = '';
-
-    $this->fields['tree'] = false;
   }
 
 }
