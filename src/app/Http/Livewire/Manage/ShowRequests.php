@@ -32,7 +32,10 @@ class ShowRequests extends Component {
 
     public function mount(Client $client) {
         $this->parent_mount();
-        if(!is_null($client->id)) $this->fields['client_id'] = $client->id;
+        if(!is_null($client->id)) {
+            $this->fields = [];
+            $this->fields['client_id'] = $client->id;
+        }
     }
 
     public function render() {
@@ -40,7 +43,7 @@ class ShowRequests extends Component {
         
         $clients = Client::all();
 
-        $requests = Request::with(['client:id,full_name,email,address,phone'])
+        $requests = Request::with(['client:id,full_name,email,address,phone,email_verified'])
         ->select('id', 'client_id', 'created_at')
         ->filterable($this->fields)
         ->sortable($this->sortable)

@@ -19,7 +19,7 @@
     ]])
 
     <div class="col-md-2">
-        <button wire:click="clear" class="btn btn-primary py-0 mt-1">Очистить</button>
+        <button wire:click="clear" class="btn btn-warning py-0 mt-1">Очистить</button>
     </div>
     @endcomponent
 
@@ -48,15 +48,17 @@
                 <td scope="col">                    
                     @component('layouts.utils.dropdown', [
                         'head' => $request->client->full_name,
-                        'id' => 'request-client-'.$request->client_id
+                        'id' => 'request-client-'.$request->client_id.'-'.$request->id
                     ])
-                        <p class="m-0">Почта: {{ $request->client->email }}</p>
+                        <p class="m-0">
+                            Почта: {{ $request->client->email }}
+                            <i class="fa fa-{{ $request->client->isVerified() ? 'check text-success' : 'times text-danger' }}" aria-hidden="true"></i>
+                        </p>
                         <p class="m-0">Адрес: {{ $request->client->address }}</p>
                         <p class="m-0">Телефон: {{ $request->client->phone }}</p>
                     @endcomponent
                 </td>
                 <td scope="col">{{ $request->created_at }}</td>
-                {{-- <td wire:click="getMoreData('{{$request->id}}')" scope="col"><i role="button" class="fa fa-eye"></i></td> --}}
                 <td wire:click="$emitTo('manage.show-requests-more', 'get-more-data', '{{$request->id}}')" scope="col"><i role="button" class="fa fa-eye"></i></td>
             </tr>
             @endforeach

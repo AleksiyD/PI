@@ -17,7 +17,7 @@
     ]])
 
     <div class="col-md-2">
-        <button wire:click="clear" class="btn btn-primary py-0 mt-1">Очистить</button>
+        <button wire:click="clear" class="btn btn-warning py-0 mt-1">Очистить</button>
     </div>
     @endcomponent
 
@@ -40,6 +40,7 @@
                 @include('layouts.utils.sort-head', ['head' => 'Телефон', 'field' => 'phone'])
                 @include('layouts.utils.sort-head', ['head' => 'Дата создания', 'field' => 'created_at'])
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -47,15 +48,18 @@
             <tr>
                 <th scope="row">{{ $num + $clients->firstItem() }}</td>
                 <td scope="col">{{ $client->full_name }}</td>
-                <td scope="col">{{ $client->email }} <i class="fa fa-{{ $client->isVerified() ? 'check text-success' : 'times text-danger' }}" aria-hidden="true"></i></td>
+                <td class="text-nowrap" scope="col">{{ $client->email }} <i class="fa fa-{{ $client->isVerified() ? 'check text-success' : 'times text-danger' }}" aria-hidden="true"></i></td>
                 <td scope="col">{{ $client->address }}</td>
                 <td scope="col">{{ $client->phone }}</td>
                 <td scope="col">{{ $client->created_at }}</td>
                 <td scope="col">
-                    <a href="{{ route('manage.show-requests-client', ['client' => $client]) }}">
+                    <a class="text-nowrap" href="{{ route('manage.show-requests-client', ['client' => $client]) }}">
                         <i class="fa fa-eye"></i>
                         Запросы
                     </a>
+                </td>
+                <td scope="col">
+                    <span class="badge bg-warning">{{ $client->requests_count }}</span>
                 </td>
             </tr>
             @endforeach

@@ -7,3 +7,11 @@
     С {{ $data->firstItem() }} по {{ $data->lastItem() }} из {{ $data->total() }} 
   </div>
 </div>
+
+<style>
+  .page-link.active, .active > .page-link {
+    color: black;
+    background-color: var(--bs-warning);
+    border-color: var(--bs-warning);
+  }
+</style>
