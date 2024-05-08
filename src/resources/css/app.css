@@ -213,3 +213,13 @@ a:hover {
 	min-width: 100%;
 	padding: 30px;
 }
+
+.product-img-wrapper {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 12px;
+}
+
+.product-img {
+	width: 100%;
+}
