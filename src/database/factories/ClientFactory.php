@@ -16,8 +16,8 @@ class ClientFactory extends Factory {
             'full_name' => $this->faker->name(),
             'email' => $this->faker->email(),
             'email_verified' => array_rand([true, false]),
-            'address' => 'Address: '.Str::random(20),
-            'phone' => Str::random(9),
+            'address' => $this->faker->address(),
+            'phone' => $this->faker->numerify('##########'),
             'created_at' => $this->faker->dateTime('now')
         ];
     }
