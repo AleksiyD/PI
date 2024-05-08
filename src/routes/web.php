@@ -38,7 +38,8 @@ Route::prefix('manage')->group(function() {
         'verify' => false
     ]);
     Route::middleware('auth')->name('manage.')->group(function() {
-        Route::get('/', ShowMainPage::class)->name('show-main-page');
+        // Route::get('/', ShowMainPage::class)->name('show-main-page');
+        Route::get('/', ManageController::class)->name('show-main-page');
         Route::get('/clients', ShowClients::class)->name('show-clients');
         Route::get('/requests', ShowRequests::class)->name('show-requests');
         Route::get('/requests/{client}', ShowRequests::class)->name('show-requests-client');
