@@ -24,8 +24,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	libpq-dev 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-	&& docker-php-ext-install -j$(nproc) gd intl pdo pdo_pgsql pgsql zip bcmath \
-	&& docker-php-ext-enable gd intl pdo pdo_pgsql pgsql zip bcmath \
+	&& docker-php-ext-install -j$(nproc) gd intl pdo pdo_pgsql pdo_mysql pgsql zip bcmath \
+	&& docker-php-ext-enable gd intl pdo pdo_pgsql pdo_mysql pgsql zip bcmath \
 	&& composer config -g process-timeout 3600 \
   && composer config -g repos.packagist composer https://packagist.org
 
