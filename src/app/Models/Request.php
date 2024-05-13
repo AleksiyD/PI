@@ -26,6 +26,13 @@ class Request extends Model {
         'created_at' => 'datetime:d-m-Y H:m'
     ];
 
+    protected $rel_searchable = [
+        'client_id' => [
+            'table' => 'clients',
+            'field' => 'full_name'
+        ]
+    ];
+
     protected $fillable = ['request', 'comment', 'wish', 'created_at'];
 
     public $filterable = ['client_id', 'email_verified'];
@@ -35,6 +42,6 @@ class Request extends Model {
     public $sortable = ['client_id', 'created_at'];
 
     public function client() {
-        return $this->belongsTo(Client::class);
+        return $this->belongsTo(Client::class, 'client_id', 'id', 'clients');
     }
 }

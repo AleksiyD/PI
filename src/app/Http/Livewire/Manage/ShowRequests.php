@@ -47,7 +47,7 @@ class ShowRequests extends Component {
         ->select('id', 'client_id', 'created_at')
         ->filterable($this->fields)
         ->sortable($this->sortable)
-        ->searchable($this->search)
+        // ->relationSearchable($this->search)
         ->paginate($this->perPage);
 
         $this->emit('render');
