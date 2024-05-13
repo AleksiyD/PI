@@ -31,7 +31,7 @@ class VerifyMailClient extends Mailable {
      * @return $this
      */
     public function build() {
-        return $this->subject(env('APP_URL'))
+        return $this->subject('Подтвеждение почты: '.env('APP_URL'))
         ->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'))
         ->view('emails.verify-email-client');
     }
