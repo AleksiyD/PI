@@ -27,7 +27,7 @@ class ShowRequests extends Component {
 
     public $sortable = [];
     public $fields = [
-        'email_verified' => 't'
+        'email_verified' => '1'
     ];
 
     public function mount(Client $client) {

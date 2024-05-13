@@ -8,11 +8,11 @@
     @include('layouts.utils.other-filter', ['head' => 'Верификация', 'field' => 'email_verified', 'data' => [
         [
             'option' => 'Верифицирован',
-            'value' => 't'
+            'value' => '1'
         ],
         [
             'option' => ' Не верифицирован',
-            'value' => 'f'
+            'value' => 'false'
         ]
     ]])
 
