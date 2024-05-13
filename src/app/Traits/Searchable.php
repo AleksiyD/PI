@@ -27,10 +27,10 @@ trait Searchable {
       }
       return $query->where(function($query) use ($search) {
         foreach($this->rel_searchable as $foreign) {
-          $query->orWhere("{$foreign['table']}.{$foreign['field']}", 'ilike', '%'.$search.'%');
+          $query->orWhere("{$foreign['table']}.{$foreign['field']}", 'like', '%'.$search.'%');
         }
         foreach($this->searchable as $field) {
-          $query->orWhere($this->getTable().'.'.$field, 'ilike', '%'.$search.'%');
+          $query->orWhere($this->getTable().'.'.$field, 'like', '%'.$search.'%');
         }
       });
       
