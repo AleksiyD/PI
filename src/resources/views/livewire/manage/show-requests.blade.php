@@ -1,7 +1,7 @@
 <div>
-    {{-- @component('layouts.utils.card')
+    @component('layouts.utils.card')
     @include('layouts.utils.search')
-    @endcomponent --}}
+    @endcomponent
 
     @component('layouts.utils.card')
     @include('layouts.utils.paginate')
@@ -36,10 +36,7 @@
                 <th scope="col">
                     #
                 </th>
-                {{-- @include('layouts.utils.sort-head', ['head' => 'ФИО', 'field' => 'client_id']) --}}
-                <th scope="col">
-					ФИО
-				</th>
+                @include('layouts.utils.sort-head', ['head' => 'ФИО', 'field' => 'client_id'])
                 @include('layouts.utils.sort-head', ['head' => 'Дата создания', 'field' => 'created_at'])
                 <th></th>
             </tr>

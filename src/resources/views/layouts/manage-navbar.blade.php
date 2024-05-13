@@ -15,9 +15,9 @@
 						<li class="nav-item">
 							<a class="nav-link active" aria-current="page" href="{{ route('manage.show-clients') }}">Клиенты</a>
 						</li>
-						{{-- <li class="nav-item">
+						<li class="nav-item">
 							<a class="nav-link active" aria-current="page" href="{{ route('manage.show-requests') }}">Запросы</a>
-						</li> --}}
+						</li>
 					</ul>
 					@endauth
 
