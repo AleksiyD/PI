@@ -11,7 +11,7 @@ trait Searchable {
       $query->where(function($query) use ($search) {
         $search = (string)$search;
         foreach($this->searchable as $field) {
-          $query->orWhere($this->getTable().'.'.$field, 'ilike', '%'.$search.'%');
+          $query->orWhere($this->getTable().'.'.$field, 'like', '%'.$search.'%');
         }
       });
     });
