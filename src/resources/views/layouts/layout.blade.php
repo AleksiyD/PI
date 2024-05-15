@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ООО «ПИЩЕВОЙ ИНЖИНИРИНГ». Мы команда профессионалов, занимающихся разработкой и созданием инновационных рецептур для здорового и сбалансированного питания. Почта: kgreseva@bk.ru">
     <title>ООО ПИЩЕВОЙ ИНЖИНИРИНГ @yield('title')</title>
 
     <link rel="stylesheet" href="{{ asset('fonts/montserrat/style.css') }}">
