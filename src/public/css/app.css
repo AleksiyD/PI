@@ -227,3 +227,18 @@ a:hover {
 .probootsrap-hero {
 	background-repeat: repeat;
 }
+
+.card-text {
+	display: list-item;
+	margin-bottom: 15px;
+}
+
+.card-text::marker {
+	color: white;
+}
+
+.py-text {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+

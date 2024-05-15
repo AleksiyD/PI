@@ -9,8 +9,8 @@
 							<p>
 								<iframe src="https://vk.com/video_ext.php?oid=-41441187&id=456239800&hd=3" height="360" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen></iframe>
 							</p>
-							<h3>Студенческий стартап, как начало нового проекта</h3>
-							<p>Создание инжиниринговой компании, с целью разработки и внедрения новых идей, продуктов и услуг на рынке</p>
+							<h3 class="py-text">Студенческий стартап, как начало нового проекта</h3>
+							<p class="py-text">Создание инжиниринговой компании, с целью разработки и внедрения новых идей, продуктов и услуг на рынке</p>
 							<p>
 								<a href="https://vk.com/video-41441187_456239800?list=621541a052b51dca5c" target="_blank" class="btn btn-primary">Подробнее</a>
 							</p>
@@ -47,8 +47,8 @@
 								<p>
 									<iframe height="360" src="//www.ntv.ru/embed/2293182?utm_content=video" frameborder="0" loading="lazy" allow="autoplay; fullscreen"></iframe>
 								</p>
-								<h3>Выпуск программы «Живая Еда» с Сергеем Малозёмовым на НТВ от 23.12.2023</h3>
-								<p>Обогащённые продукты — еда будущего.</p>
+								<h3 class="py-text">Выпуск программы «Живая Еда» с Сергеем Малозёмовым на НТВ от 23.12.2023</h3>
+								<p class="py-text">Обогащённые продукты — еда будущего.</p>
 								<p>
 									<a href="https://eda.show/ieda-ot-23-diekabria-2023/" target="_blank" class="btn btn-primary">Подробнее</a>
 								</p>
